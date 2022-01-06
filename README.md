@@ -20,7 +20,7 @@ First create a virtual environment
 
 Then activate that virtual environment
 
-Max/Linux
+Mac/Linux
 
     source venv/bin/activate
 
@@ -35,29 +35,15 @@ Now install flask with pip
     pip install python-dotenv
 
 ## Run the App
-
-If you did not install python-dotenv, make sure to export an environment variable to tell flask where to find the app entry file. If you did install python-dotenv, it does this for you.
-
-Only run the export/set commands if you didn't install python-dotenv.
-
-Mac/Linux
-
-    export FLASK_APP=flask-app.py
-
-Windows
-
-    set FLASK_APP=flask-app.py
-
-
-Now you can run the app with:
+You can run the app with:
 
     flask run
 
-Your app can now be viewed from the browser at
+Once the app is running you can view it in the browser at
 http://localhost:5000/
 
 ## Stop the app
-You can stop the server by pressing clicking in the terminal and pressing CTRL+CY.
+You can stop the server by clicking in the terminal and pressing CTRL+C.
 
 You can exit the virtual environment by running the deactivate command.
 
@@ -66,3 +52,5 @@ You can exit the virtual environment by running the deactivate command.
 ## References
 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+https://www.youtube.com/watch?v=MwZwr5Tvyxo
