@@ -8,7 +8,8 @@ def home():
     return render_template("index.html")
 
 @app.route("/404")
-def not_found():
+@app.errorhandler(404)
+def not_found(error=None):
     return render_template("404.html")
 
 @app.route("/favicon.ico")
