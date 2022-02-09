@@ -54,3 +54,7 @@ You can exit the virtual environment by running the deactivate command.
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 https://www.youtube.com/watch?v=MwZwr5Tvyxo
+
+REST API METHODS:  https://restfulapi.net/http-methods/
+
+HTTP STATUS CODES: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
