@@ -11,6 +11,10 @@
 
     code flask-app
 
+In your terminal
+
+    cd flask-app
+
 ### Create and activate the python virtual environment
 In VS Code, open a new terminal in the flask-app folder.
 
