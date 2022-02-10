@@ -1,0 +1,7 @@
+@hostname = localhost
+@port = 5000
+@host = {{hostname}}:{{port}}
+@server = http://{{host}}
+@contentType = Content-Type: application/json
+
+GET {{server}}/user

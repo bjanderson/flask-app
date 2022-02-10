@@ -18,5 +18,15 @@ class UserApi():
             )
             return response
 
+    def post(self):
+        data_string = request.get_data()
+        print(data_string)
+        data = json.loads(data_string)
+        response = self.app.resonse_class(
+            response=json.dumps(data, status=200, mimetype="application/json")
+        )
+        return response
+
     def configure_routes(self, app):
         app.add_url_rule("/user", "user-get", self.get, methods=["GET"])
+        app.add_url_rule("/user", "user-post", self.post, None, methods=["POST"])
