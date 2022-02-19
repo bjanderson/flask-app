@@ -5,3 +5,13 @@
 @contentType = Content-Type: application/json
 
 GET {{server}}/user
+
+###
+
+POST {{server}}/user
+{{contentType}}
+
+{
+    "name": "test user",
+    "email": "test@email"
+}
