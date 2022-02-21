@@ -2,16 +2,36 @@
 @port = 5000
 @host = {{hostname}}:{{port}}
 @server = http://{{host}}
+@api = {{server}}/user
 @contentType = Content-Type: application/json
 
-GET {{server}}/user
+GET {{api}}
 
 ###
 
-POST {{server}}/user
+GET {{api}}/userpk1
+
+###
+
+POST {{api}}
 {{contentType}}
 
 {
-    "name": "test user",
-    "email": "test@email"
+  "name": "username 3",
+  "email": "user_3@email.tld"
 }
+
+###
+
+PUT {{api}}/userpk1
+{{contentType}}
+
+{
+  "name": "updated username 3",
+  "email": "updated_user_3@email.tld",
+  "pk": "userpk3"
+}
+
+###
+
+DELETE {{api}}/userpk3
