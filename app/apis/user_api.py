@@ -54,11 +54,27 @@ class UserApi():
         print("Post")
         print(data_string)
         data = json.loads(data_string)
+
         response = self.app.response_class(
             response=json.dumps(data), status=200, mimetype="application/json"
         )
         return response
 
+        # item = self.db.insert(data)
+        # if item is None:
+        #     response_item = json.dumps(
+        #         {"message": f"Could not insert data {json.loads(data_string)}"}
+        #     )
+        #     response = self.app.response_class(
+        #         response=response_item, status=500, mimetype="application/json"
+        #     )
+        #     return response
+        # else:
+        #     response_item = json.dumps(item.__dict__)
+        #     response = self.app.response_class(
+        #         response=response_item, status=200, mimetype="application/json"
+        #     )
+        #     return response
 
     def put(self, pk=None):
         data_string = request.get_data()
@@ -66,20 +82,39 @@ class UserApi():
         print(f"pk: {pk}")
         print(data_string)
         data = json.loads(data_string)
+
         response = self.app.response_class(
             response=json.dumps(data), status=200, mimetype="application/json"
         )
         return response
 
+        # item = self.db.update(data)
+        # if item is None:
+        #     response_item = json.dumps(
+        #         {"message": f"Could not update data {json.loads(data_string)}"}
+        #     )
+        #     response = self.app.response_class(
+        #         response=response_item, status=500, mimetype="application/json"
+        #     )
+        #     return response
+        # else:
+        #     response_item = json.dumps(item.__dict__)
+        #     response = self.app.response_class(
+        #         response=response_item, status=200, mimetype="application/json"
+        #     )
+        #     return response
+
     def delete(self, pk=None):
         print("\nDelete")
         print(f"pk: {pk}")
+
+        # self.db.delete(pk)
+
         data = {"deleted": True, "pk": pk}
         response = self.app.response_class(
             response=json.dumps(data), status=200, mimetype="application/json"
         )
         return response
-
 
     def configure_routes(self, app):
         app.add_url_rule("/user", "user-get", self.get, methods=["GET"])
