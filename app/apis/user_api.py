@@ -18,36 +18,36 @@ class UserApi():
             print("\nGet One")
             print(f"pk: {pk}")
 
-            item = {"name": "user 1"}
-            response = self.app.response_class(
-                response=json.dumps(item), status=200, mimetype="application/json"
-            )
-            return response
-
-            # item = self.db.get(pk)
-            # if item is not None:
-            #     item = item.__dict__
+            # item = {"name": "user 1"}
             # response = self.app.response_class(
             #     response=json.dumps(item), status=200, mimetype="application/json"
             # )
             # return response
 
+            item = self.db.get(pk)
+            if item is not None:
+                item = item.__dict__
+            response = self.app.response_class(
+                response=json.dumps(item), status=200, mimetype="application/json"
+            )
+            return response
+
         else:
             # get all items from the database
             print("\nGet All")
 
-            items = [{"name": "user 1"}, {"name": "user 2"}, {"name": "user 3"}]
-            response = self.app.response_class(
-                response=json.dumps(items), status=200, mimetype="application/json"
-            )
-            return response
-
-            # items = self.db.get_all()
-            # items = list(map(lambda item: item.__dict__, items))
+            # items = [{"name": "user 1"}, {"name": "user 2"}, {"name": "user 3"}]
             # response = self.app.response_class(
             #     response=json.dumps(items), status=200, mimetype="application/json"
             # )
             # return response
+
+            items = self.db.get_all()
+            items = list(map(lambda item: item.__dict__, items))
+            response = self.app.response_class(
+                response=json.dumps(items), status=200, mimetype="application/json"
+            )
+            return response
 
     def post(self):
         data_string = request.get_data()
