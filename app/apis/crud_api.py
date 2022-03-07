@@ -88,7 +88,7 @@ class CrudAPI(ABC):
             f"{self.route}", f"{self.id}-post", self.post, None, methods=["POST"]
         )
         app.add_url_rule(
-            f"{self.route}", f"{self.id}-put", self.put, None, methods=["PUT"]
+            f"{self.route}/<pk>", f"{self.id}-put", self.put, None, methods=["PUT"]
         )
         app.add_url_rule(
             f"{self.route}/<pk>",

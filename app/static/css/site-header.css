@@ -1,0 +1,43 @@
+
+.site-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  background-color: #009eff;
+  color: white;
+}
+
+.site-header nav {
+  padding-right: 1rem;
+}
+
+.site-header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.site-header nav ul li a {
+  padding-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.site-header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo img {
+  height: 2rem;
+}
+
+.site-name {
+  font-size: 2rem;
+  margin-left: 0.25rem;
+}

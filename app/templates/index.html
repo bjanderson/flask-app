@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,6 +11,26 @@
 <body>
     <h1>Flask App</h1>
     <p>We're just getting started...</p>
+
+    <script src="/static/js/app.js"></script>
 </body>
 
-</html>
+</html> -->
+
+
+{% extends "base.html" %}
+
+{% block title %}Flask App{% endblock %}
+
+{% block description %}An introduction to building web apps{% endblock %}
+
+{% block basecontent %}
+
+<h1 class="title">Welcome To Flask App</h1>
+<p class="subtitle">We're just getting started...</p>
+
+{% block basescripts %}
+<script src="/static/js/app.js"></script>
+{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+
+.login-form {
+  border: 1px solid lightblue;
+  border-radius: 5%;
+  width: fit-content;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.login-form label {
+  display: block;
+}
+
+.login-form label {
+  margin-top: 1rem;
+}

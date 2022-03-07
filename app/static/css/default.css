@@ -1,0 +1,17 @@
+/* Note: using css imports is not ideal because it still makes a separate network request for each file.
+ * Ideally, you would compile all of these styles into one file using some sort of tool like SASS, LESS, or PostCSS.
+ * It is important to have a clean css architecture though, and breaking styles up into separate files is a good start.
+ */
+
+/* These styles are going to be included in every page of our site.
+ * If there are styles that are specific to only one page on the site (such as the login form), don't include them here.
+ */
+
+/* vendor imports first */
+@import url("vendor/normalize.css");
+@import url("vendor/h5bp.css");
+
+/* then ours can override the vendor styles if necessary */
+@import url("dom.css");
+@import url("site-header.css");
+@import url("main.css");

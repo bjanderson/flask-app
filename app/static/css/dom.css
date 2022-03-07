@@ -1,0 +1,26 @@
+/* DOM refers to the standard HTML elements.
+ * There shouldn't be any class names or ids in here, just regular html tags.
+ * If you override a dom element's style here, it should take effect across the entire app,
+ * unless it's specifically styled by some other class somewhere else.
+ * Also, you want to import this stylesheet before any of your other ones, so you can
+ * overwrite these styles later on with more specific selectors.
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
