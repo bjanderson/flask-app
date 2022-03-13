@@ -29,9 +29,9 @@ PUT {{api}}/userpk1
 {
   "name": "updated username 3",
   "email": "updated_user_3@email.tld",
-  "pk": "userpk3"
+  "pk": "userpk1"
 }
 
 ###
 
-DELETE {{api}}/userpk3
+DELETE {{api}}/userpk2

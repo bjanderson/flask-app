@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,10 +15,10 @@
     <script src="/static/js/app.js"></script>
 </body>
 
-</html>
+</html> -->
 
 
-<!-- {% extends "base.html" %}
+{% extends "base.html" %}
 
 {% block title %}Flask App{% endblock %}
 
@@ -26,11 +26,22 @@
 
 {% block basecontent %}
 
-<h1 class="title">Welcome To Flask App</h1>
-<p class="subtitle">We're just getting started...</p>
+<div class="main">
+    <h1 class="title">Welcome To Flask App</h1>
+    <p class="subtitle">We're just getting started...</p>
+</div>
+
+<div class="content">
+    <label for="username">User Name</label>
+    <input type="text" id="username">
+</div>
+
+<div class="buttons">
+    <button onclick="getUsername()">Get User Name</button>
+</div>
 
 {% block basescripts %}
 <script src="/static/js/app.js"></script>
 {% endblock %}
 
-{% endblock %} -->
+{% endblock %}
