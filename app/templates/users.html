@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Users| Flask App</title>
+    <meta name="description" content="Using the Users API">
+
+    <link rel="apple-touch-icon" href="/static/img/apple-icon.png">
+
+    <link rel="stylesheet" href="/static/css/default.css">
+    <link rel="stylesheet" href="/static/css/users.css">
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-title">
+            <div class="site-logo">
+                <img src="/static/img/network-brain.jpeg" alt="Picture of a network in the shape of a brain.">
+            </div>
+            <div class="site-name">
+                Flask App
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/users">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main" role="main">
+        <h1 class="title">Flask App Users</h1>
+        <p class="subtitle">Using the Users API...</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>PK</th>
+                </tr>
+            </thead>
+            <tbody id="users_table_body"></tbody>
+        </table>
+
+        <hr>
+    </div>
+
+    <template id="user_row_template">
+        <tr>
+            <td class="name"></td>
+            <td class="email"></td>
+            <td class="pk"></td>
+        </tr>
+    </template>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/users.js"></script>
+
+</body>
+
+</html>

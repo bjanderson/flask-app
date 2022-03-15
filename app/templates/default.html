@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block basecontent %}
+
+<header class="site-header">
+  <div class="site-title">
+    <div class="site-logo">
+      <img src="/static/img/network-brain.jpeg" alt="Picture of a network in the shape of a brain.">
+    </div>
+    <div class="site-name">
+      Flask App
+    </div>
+  </div>
+
+  {% include 'main-nav.html' %}
+
+</header>
+
+<div class="main" role="main">
+  {% block content %}{% endblock %}
+</div>
+
+{% block templates %}{% endblock %}
+
+{% endblock %}

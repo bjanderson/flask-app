@@ -3,6 +3,7 @@
 @host = {{hostname}}:{{port}}
 @server = http://{{host}}
 @api = {{server}}/user
+# api = http://localhost:5000/user
 @contentType = Content-Type: application/json
 
 GET {{api}}

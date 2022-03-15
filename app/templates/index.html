@@ -1,35 +1,12 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
-</head>
-
-<body>
-    <h1>Flask App</h1>
-    <p>We're just getting started...</p>
-
-    <script src="/static/js/app.js"></script>
-</body>
-
-</html> -->
-
-
-{% extends "base.html" %}
+{% extends "default.html" %}
 
 {% block title %}Flask App{% endblock %}
-
 {% block description %}An introduction to building web apps{% endblock %}
 
-{% block basecontent %}
+{% block content %}
 
-<div class="main">
-    <h1 class="title">Welcome To Flask App</h1>
-    <p class="subtitle">We're just getting started...</p>
-</div>
+<h1 class="title">Welcome To Flask App</h1>
+<p class="subtitle">We're just getting started...</p>
 
 <div class="content">
     <label for="username">User Name</label>
@@ -39,9 +16,5 @@
 <div class="buttons">
     <button onclick="getUsername()">Get User Name</button>
 </div>
-
-{% block basescripts %}
-<script src="/static/js/app.js"></script>
-{% endblock %}
 
 {% endblock %}

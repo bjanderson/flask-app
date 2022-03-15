@@ -7,6 +7,10 @@ from flask import redirect, render_template, url_for
 def home():
     return render_template("index.html")
 
+@app.route("/users")
+def users():
+    return render_template("users.html")
+
 @app.route("/404")
 @app.errorhandler(404)
 def not_found(error=None):
