@@ -10,7 +10,8 @@ function getUsers() {
         .then(response => response.json())
         .then(users => {
             addUsersToTable(users)
-        });
+        })
+        .catch((error) => { console.log(error) });
 }
 
 function addUsersToTable(users) {
