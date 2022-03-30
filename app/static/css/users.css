@@ -14,3 +14,12 @@ tr:hover {
     background-color: cornflowerblue;
     color: white;
 }
+
+.inputs, .buttons {
+    display: flex;
+    width: 100%;
+}
+
+.input {
+    margin-right: 1rem;
+}

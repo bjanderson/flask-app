@@ -17,12 +17,15 @@ function getUsers() {
 function addUsersToTable(users) {
     console.log(users)
 
-    const tbody = document.querySelector('#users_table_body')
-
     users.forEach(user => {
-        const userRow = getUserRow(user)
-        tbody.appendChild(userRow)
+        addUserToTable(user)
     })
+}
+
+function addUserToTable(user) {
+    const tbody = document.querySelector('#users_table_body')
+    const userRow = getUserRow(user)
+    tbody.appendChild(userRow)
 }
 
 function getUserRow(user) {
@@ -40,4 +43,34 @@ function getUserRow(user) {
     userTemplate.querySelector('tr').addEventListener('click', () => { console.log(user) })
 
     return userTemplate
+}
+
+function addUser() {
+    const nameInput = document.querySelector('#username')
+    const emailInput = document.querySelector('#useremail')
+
+    const name = nameInput.value
+    const email = emailInput.value
+
+    if (name && email) {
+        const user = {
+            name: name,
+            email: email
+        }
+
+        const api = 'http://localhost:5000/user'
+        const options = {
+            method: 'POST',
+            body: JSON.stringify(user)
+        }
+        fetch(api, options)
+            .then(response => response.json())
+            .then(user => {
+                console.log(user)
+                addUserToTable(user)
+            })
+            .catch((error) => { console.log(error) })
+    } else {
+        alert('Enter name and email')
+    }
 }
