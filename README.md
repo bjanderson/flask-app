@@ -53,6 +53,15 @@ You can exit the virtual environment by running the deactivate command.
 
     deactivate
 
+## Git Pull
+In your terminal
+
+    git add -A
+    git commit -m "commit message"
+    git checkout master
+    git pull
+    git checkout -b edits
+
 ## References
 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
