@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts | Flask App</title>
+
+
+    <link rel="stylesheet" href="/static/css/default.css">
+    <link rel="stylesheet" href="/static/css/posts.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-title">
+            <div class="site-logo">
+                <img src="/static/img/network-brain.jpeg" alt="Picture of a network in the shape of a brain.">
+            </div>
+            <div class="site-name">
+                Flask App
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/users">Users</a></li>
+                <li><a href="/posts">Posts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="posts">
+    </div>
+
+    <template id="post_template">
+        <div class="title">
+        </div>
+        <div class="content">
+        </div>
+    </template>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/posts.js"></script>
+
+</body>
+
+</html>

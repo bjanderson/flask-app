@@ -1,0 +1,10 @@
+.title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: purple;
+}
+
+.content {
+    font-size: 2rem;
+    max-width: 40%;
+}

@@ -11,6 +11,10 @@ def home():
 def users():
     return render_template("users.html")
 
+@app.route("/posts")
+def posts():
+    return render_template("posts.html")
+
 @app.route("/404")
 @app.errorhandler(404)
 def not_found(error=None):

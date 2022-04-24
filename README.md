@@ -56,6 +56,7 @@ You can exit the virtual environment by running the deactivate command.
 ## Git Pull
 In your terminal
 
+    git status
     git add -A
     git commit -m "commit message"
     git checkout master
