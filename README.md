@@ -63,6 +63,16 @@ In your terminal
     git pull
     git checkout -b edits
 
+## Git login
+
+https://stackoverflow.com/a/68921750
+
+Go to your Github Settings -> Developer Settings -> Personal Access Tokens page in GitHub (https://github.com/settings/tokens/new), and generate a new Token with all Repo permissions
+
+Search Keychain Access in your mac -> search for github.com -> click Show password then paste the token you just copied.
+
+Go to the CLI, it will ask again for username and password, enter your Github username and paste the token as password, and you should be good to go for the rest of the times you are using the CLI.
+
 ## References
 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
